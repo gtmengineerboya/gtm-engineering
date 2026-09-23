@@ -170,4 +170,23 @@ Potential customers come to the company.
 ## Outbound
 
 The company proactively identifies and contacts potential
-customers.
+customers. 
+
+
+<!-- # What Does a GTM Engineer Do?
+
+A GTM Engineer builds technical systems that help
+companies identify, qualify, enrich, route and analyze
+potential customers.
+
+A GTM Engineer connects:
+
+Data
+→ APIs
+→ Automation
+→ AI
+→ CRM
+→ Sales
+→ Analytics
+
+The goal is to automate and improve revenue workflows. -->
