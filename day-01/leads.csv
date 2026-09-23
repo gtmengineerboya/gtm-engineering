@@ -1,0 +1,11 @@
+company,website,industry,employees,location,technology,contact_name,job_title,email,icp_score
+Northstar Labs,https://northstarlabs.com,Software,120,New York,NY,CRM,VP of Operations,alex@northstarlabs.com,82
+BluePeak Health,https://bluepeakhealth.com,Healthcare,340,Chicago,IL,Salesforce,Revenue Operations Manager,hello@bluepeakhealth.com,91
+Harbor Financial,https://harborfinancial.io,Finance,210,Boston,MA,HubSpot,Director of Finance,contact@harborfinancial.io,41
+SignalWorks,https://signalworks.co,Manufacturing,800,Detroit,MI,ERP,Operations Director,info@signalworks.co,74
+Velora Cloud,https://veloracloud.com,Technology,180,San Francisco,CA,Slack,VP of Engineering,team@veloracloud.com,88
+Greenfield Retail,https://greenfieldretail.com,Retail,430,Austin,TX,Shopify,Marketing Manager,hello@greenfieldretail.com,36
+Gradient Ops,https://gradientops.com,Logistics,560,Denver,CO,Tableau,Head of Supply Chain,ops@gradientops.com,79
+Verve Studio,https://vervestudio.com,Media,90,Los Angeles,CA,Notion,Creative Director,hello@vervestudio.com,86
+Maple AI,https://mapleai.com,Software,150,Seattle,WA,HubSpot,Product Lead,contact@mapleai.com,68
+Silverline Energy,https://silverlineenergy.com,Energy,620,Houston,TX,Power BI,Director of Strategy,team@silverlineenergy.com,93
