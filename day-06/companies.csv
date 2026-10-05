@@ -1,0 +1,101 @@
+company,website,industry,employees,country,technology,job_title
+Company1,company1.example.com,SaaS,75,USA,AWS;Python;React,VP Sales
+Company2,company2.example.com,Finance,100,India,Azure;Power BI;SQL,CTO
+Company3,company3.example.com,Healthcare,125,UK,GCP;Kubernetes;Python,VP Marketing
+Company4,company4.example.com,Cybersecurity,150,Canada,AWS;Node.js;React,CEO
+Company5,company5.example.com,Retail,175,Germany,Azure;Java;Spring Boot,Chief Growth Officer
+Company6,company6.example.com,Energy,200,USA,GCP;React;PostgreSQL,Revenue Operations Manager
+Company7,company7.example.com,Education,225,India,AWS;Python;React,VP Sales
+Company8,company8.example.com,Manufacturing,250,UK,Azure;Power BI;SQL,CTO
+Company9,company9.example.com,SaaS,275,Canada,GCP;Kubernetes;Python,VP Marketing
+Company10,company10.example.com,Finance,300,Germany,AWS;Node.js;React,CEO
+Company11,company11.example.com,Healthcare,325,USA,Azure;Java;Spring Boot,Chief Growth Officer
+Company12,company12.example.com,Cybersecurity,350,India,GCP;React;PostgreSQL,Revenue Operations Manager
+Company13,company13.example.com,Retail,375,UK,AWS;Python;React,VP Sales
+Company14,company14.example.com,Energy,400,Canada,Azure;Power BI;SQL,CTO
+Company15,company15.example.com,Education,425,Germany,GCP;Kubernetes;Python,VP Marketing
+Company16,company16.example.com,Manufacturing,450,USA,AWS;Node.js;React,CEO
+Company17,company17.example.com,SaaS,475,India,Azure;Java;Spring Boot,Chief Growth Officer
+Company18,company18.example.com,Finance,500,UK,GCP;React;PostgreSQL,Revenue Operations Manager
+Company19,company19.example.com,Healthcare,525,Canada,AWS;Python;React,VP Sales
+Company20,company20.example.com,Cybersecurity,550,Germany,Azure;Power BI;SQL,CTO
+Company21,company21.example.com,Retail,575,USA,GCP;Kubernetes;Python,VP Marketing
+Company22,company22.example.com,Energy,600,India,AWS;Node.js;React,CEO
+Company23,company23.example.com,Education,625,UK,Azure;Java;Spring Boot,Chief Growth Officer
+Company24,company24.example.com,Manufacturing,650,Canada,GCP;React;PostgreSQL,Revenue Operations Manager
+Company25,company25.example.com,SaaS,675,Germany,AWS;Python;React,VP Sales
+Company26,company26.example.com,Finance,700,USA,Azure;Power BI;SQL,CTO
+Company27,company27.example.com,Healthcare,725,India,GCP;Kubernetes;Python,VP Marketing
+Company28,company28.example.com,Cybersecurity,750,UK,AWS;Node.js;React,CEO
+Company29,company29.example.com,Retail,775,Canada,Azure;Java;Spring Boot,Chief Growth Officer
+Company30,company30.example.com,Energy,800,Germany,GCP;React;PostgreSQL,Revenue Operations Manager
+Company31,company31.example.com,Education,825,USA,AWS;Python;React,VP Sales
+Company32,company32.example.com,Manufacturing,850,India,Azure;Power BI;SQL,CTO
+Company33,company33.example.com,SaaS,875,UK,GCP;Kubernetes;Python,VP Marketing
+Company34,company34.example.com,Finance,900,Canada,AWS;Node.js;React,CEO
+Company35,company35.example.com,Healthcare,925,Germany,Azure;Java;Spring Boot,Chief Growth Officer
+Company36,company36.example.com,Cybersecurity,950,USA,GCP;React;PostgreSQL,Revenue Operations Manager
+Company37,company37.example.com,Retail,975,India,AWS;Python;React,VP Sales
+Company38,company38.example.com,Energy,1000,UK,Azure;Power BI;SQL,CTO
+Company39,company39.example.com,Education,1025,Canada,GCP;Kubernetes;Python,VP Marketing
+Company40,company40.example.com,Manufacturing,1050,Germany,AWS;Node.js;React,CEO
+Company41,company41.example.com,SaaS,1075,USA,Azure;Java;Spring Boot,Chief Growth Officer
+Company42,company42.example.com,Finance,1100,India,GCP;React;PostgreSQL,Revenue Operations Manager
+Company43,company43.example.com,Healthcare,1125,UK,AWS;Python;React,VP Sales
+Company44,company44.example.com,Cybersecurity,1150,Canada,Azure;Power BI;SQL,CTO
+Company45,company45.example.com,Retail,1175,Germany,GCP;Kubernetes;Python,VP Marketing
+Company46,company46.example.com,Energy,1200,USA,AWS;Node.js;React,CEO
+Company47,company47.example.com,Education,1225,India,Azure;Java;Spring Boot,Chief Growth Officer
+Company48,company48.example.com,Manufacturing,1250,UK,GCP;React;PostgreSQL,Revenue Operations Manager
+Company49,company49.example.com,SaaS,1275,Canada,AWS;Python;React,VP Sales
+Company50,company50.example.com,Finance,1300,Germany,Azure;Power BI;SQL,CTO
+Company51,company51.example.com,Healthcare,1325,USA,GCP;Kubernetes;Python,VP Marketing
+Company52,company52.example.com,Cybersecurity,1350,India,AWS;Node.js;React,CEO
+Company53,company53.example.com,Retail,1375,UK,Azure;Java;Spring Boot,Chief Growth Officer
+Company54,company54.example.com,Energy,1400,Canada,GCP;React;PostgreSQL,Revenue Operations Manager
+Company55,company55.example.com,Education,1425,Germany,AWS;Python;React,VP Sales
+Company56,company56.example.com,Manufacturing,1450,USA,Azure;Power BI;SQL,CTO
+Company57,company57.example.com,SaaS,1475,India,GCP;Kubernetes;Python,VP Marketing
+Company58,company58.example.com,Finance,1500,UK,AWS;Node.js;React,CEO
+Company59,company59.example.com,Healthcare,1525,Canada,Azure;Java;Spring Boot,Chief Growth Officer
+Company60,company60.example.com,Cybersecurity,1550,Germany,GCP;React;PostgreSQL,Revenue Operations Manager
+Company61,company61.example.com,Retail,1575,USA,AWS;Python;React,VP Sales
+Company62,company62.example.com,Energy,1600,India,Azure;Power BI;SQL,CTO
+Company63,company63.example.com,Education,1625,UK,GCP;Kubernetes;Python,VP Marketing
+Company64,company64.example.com,Manufacturing,1650,Canada,AWS;Node.js;React,CEO
+Company65,company65.example.com,SaaS,1675,Germany,Azure;Java;Spring Boot,Chief Growth Officer
+Company66,company66.example.com,Finance,1700,USA,GCP;React;PostgreSQL,Revenue Operations Manager
+Company67,company67.example.com,Healthcare,1725,India,AWS;Python;React,VP Sales
+Company68,company68.example.com,Cybersecurity,1750,UK,Azure;Power BI;SQL,CTO
+Company69,company69.example.com,Retail,1775,Canada,GCP;Kubernetes;Python,VP Marketing
+Company70,company70.example.com,Energy,1800,Germany,AWS;Node.js;React,CEO
+Company71,company71.example.com,Education,1825,USA,Azure;Java;Spring Boot,Chief Growth Officer
+Company72,company72.example.com,Manufacturing,1850,India,GCP;React;PostgreSQL,Revenue Operations Manager
+Company73,company73.example.com,SaaS,1875,UK,AWS;Python;React,VP Sales
+Company74,company74.example.com,Finance,1900,Canada,Azure;Power BI;SQL,CTO
+Company75,company75.example.com,Healthcare,1925,Germany,GCP;Kubernetes;Python,VP Marketing
+Company76,company76.example.com,Cybersecurity,1950,USA,AWS;Node.js;React,CEO
+Company77,company77.example.com,Retail,1975,India,Azure;Java;Spring Boot,Chief Growth Officer
+Company78,company78.example.com,Energy,2000,UK,GCP;React;PostgreSQL,Revenue Operations Manager
+Company79,company79.example.com,Education,2025,Canada,AWS;Python;React,VP Sales
+Company80,company80.example.com,Manufacturing,2050,Germany,Azure;Power BI;SQL,CTO
+Company81,company81.example.com,SaaS,2075,USA,GCP;Kubernetes;Python,VP Marketing
+Company82,company82.example.com,Finance,2100,India,AWS;Node.js;React,CEO
+Company83,company83.example.com,Healthcare,2125,UK,Azure;Java;Spring Boot,Chief Growth Officer
+Company84,company84.example.com,Cybersecurity,2150,Canada,GCP;React;PostgreSQL,Revenue Operations Manager
+Company85,company85.example.com,Retail,2175,Germany,AWS;Python;React,VP Sales
+Company86,company86.example.com,Energy,2200,USA,Azure;Power BI;SQL,CTO
+Company87,company87.example.com,Education,2225,India,GCP;Kubernetes;Python,VP Marketing
+Company88,company88.example.com,Manufacturing,2250,UK,AWS;Node.js;React,CEO
+Company89,company89.example.com,SaaS,2275,Canada,Azure;Java;Spring Boot,Chief Growth Officer
+Company90,company90.example.com,Finance,2300,Germany,GCP;React;PostgreSQL,Revenue Operations Manager
+Company91,company91.example.com,Healthcare,2325,USA,AWS;Python;React,VP Sales
+Company92,company92.example.com,Cybersecurity,2350,India,Azure;Power BI;SQL,CTO
+Company93,company93.example.com,Retail,2375,UK,GCP;Kubernetes;Python,VP Marketing
+Company94,company94.example.com,Energy,2400,Canada,AWS;Node.js;React,CEO
+Company95,company95.example.com,Education,2425,Germany,Azure;Java;Spring Boot,Chief Growth Officer
+Company96,company96.example.com,Manufacturing,2450,USA,GCP;React;PostgreSQL,Revenue Operations Manager
+Company97,company97.example.com,SaaS,2475,India,AWS;Python;React,VP Sales
+Company98,company98.example.com,Finance,2500,UK,Azure;Power BI;SQL,CTO
+Company99,company99.example.com,Healthcare,2525,Canada,GCP;Kubernetes;Python,VP Marketing
+Company100,company100.example.com,Cybersecurity,2550,Germany,AWS;Node.js;React,CEO
