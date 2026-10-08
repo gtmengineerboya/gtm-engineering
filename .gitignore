@@ -1,2 +1,4 @@
 gtm.db
 .env
+
+__pycache__/
