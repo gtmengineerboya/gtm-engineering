@@ -1,0 +1,101 @@
+company_name,website,industry,country,employees,technology,employee_segment,ai_signal,saas_signal,target_market
+,company1.example.com,SaaS,USA,75,AWS;Python;React,SMB,No,Yes,Yes
+,company2.example.com,Finance,India,100,Azure;Power BI;SQL,Growth,No,No,No
+,company3.example.com,Healthcare,UK,125,GCP;Kubernetes;Python,Growth,No,No,No
+,company4.example.com,Cybersecurity,Canada,150,AWS;Node.js;React,Growth,No,No,No
+,company5.example.com,Retail,Germany,175,Azure;Java;Spring Boot,Growth,No,No,No
+,company6.example.com,Energy,USA,200,GCP;React;PostgreSQL,Growth,No,No,Yes
+,company7.example.com,Education,India,225,AWS;Python;React,Growth,No,No,No
+,company8.example.com,Manufacturing,UK,250,Azure;Power BI;SQL,Growth,No,No,No
+,company9.example.com,SaaS,Canada,275,GCP;Kubernetes;Python,Growth,No,Yes,No
+,company10.example.com,Finance,Germany,300,AWS;Node.js;React,Growth,No,No,No
+,company11.example.com,Healthcare,USA,325,Azure;Java;Spring Boot,Growth,No,No,Yes
+,company12.example.com,Cybersecurity,India,350,GCP;React;PostgreSQL,Growth,No,No,No
+,company13.example.com,Retail,UK,375,AWS;Python;React,Growth,No,No,No
+,company14.example.com,Energy,Canada,400,Azure;Power BI;SQL,Growth,No,No,No
+,company15.example.com,Education,Germany,425,GCP;Kubernetes;Python,Growth,No,No,No
+,company16.example.com,Manufacturing,USA,450,AWS;Node.js;React,Growth,No,No,Yes
+,company17.example.com,SaaS,India,475,Azure;Java;Spring Boot,Growth,No,Yes,No
+,company18.example.com,Finance,UK,500,GCP;React;PostgreSQL,Mid-Market,No,No,No
+,company19.example.com,Healthcare,Canada,525,AWS;Python;React,Mid-Market,No,No,No
+,company20.example.com,Cybersecurity,Germany,550,Azure;Power BI;SQL,Mid-Market,No,No,No
+,company21.example.com,Retail,USA,575,GCP;Kubernetes;Python,Mid-Market,No,No,Yes
+,company22.example.com,Energy,India,600,AWS;Node.js;React,Mid-Market,No,No,No
+,company23.example.com,Education,UK,625,Azure;Java;Spring Boot,Mid-Market,No,No,No
+,company24.example.com,Manufacturing,Canada,650,GCP;React;PostgreSQL,Mid-Market,No,No,No
+,company25.example.com,SaaS,Germany,675,AWS;Python;React,Mid-Market,No,Yes,No
+,company26.example.com,Finance,USA,700,Azure;Power BI;SQL,Mid-Market,No,No,Yes
+,company27.example.com,Healthcare,India,725,GCP;Kubernetes;Python,Mid-Market,No,No,No
+,company28.example.com,Cybersecurity,UK,750,AWS;Node.js;React,Mid-Market,No,No,No
+,company29.example.com,Retail,Canada,775,Azure;Java;Spring Boot,Mid-Market,No,No,No
+,company30.example.com,Energy,Germany,800,GCP;React;PostgreSQL,Mid-Market,No,No,No
+,company31.example.com,Education,USA,825,AWS;Python;React,Mid-Market,No,No,Yes
+,company32.example.com,Manufacturing,India,850,Azure;Power BI;SQL,Mid-Market,No,No,No
+,company33.example.com,SaaS,UK,875,GCP;Kubernetes;Python,Mid-Market,No,Yes,No
+,company34.example.com,Finance,Canada,900,AWS;Node.js;React,Mid-Market,No,No,No
+,company35.example.com,Healthcare,Germany,925,Azure;Java;Spring Boot,Mid-Market,No,No,No
+,company36.example.com,Cybersecurity,USA,950,GCP;React;PostgreSQL,Mid-Market,No,No,Yes
+,company37.example.com,Retail,India,975,AWS;Python;React,Mid-Market,No,No,No
+,company38.example.com,Energy,UK,1000,Azure;Power BI;SQL,Enterprise,No,No,No
+,company39.example.com,Education,Canada,1025,GCP;Kubernetes;Python,Enterprise,No,No,No
+,company40.example.com,Manufacturing,Germany,1050,AWS;Node.js;React,Enterprise,No,No,No
+,company41.example.com,SaaS,USA,1075,Azure;Java;Spring Boot,Enterprise,No,Yes,Yes
+,company42.example.com,Finance,India,1100,GCP;React;PostgreSQL,Enterprise,No,No,No
+,company43.example.com,Healthcare,UK,1125,AWS;Python;React,Enterprise,No,No,No
+,company44.example.com,Cybersecurity,Canada,1150,Azure;Power BI;SQL,Enterprise,No,No,No
+,company45.example.com,Retail,Germany,1175,GCP;Kubernetes;Python,Enterprise,No,No,No
+,company46.example.com,Energy,USA,1200,AWS;Node.js;React,Enterprise,No,No,Yes
+,company47.example.com,Education,India,1225,Azure;Java;Spring Boot,Enterprise,No,No,No
+,company48.example.com,Manufacturing,UK,1250,GCP;React;PostgreSQL,Enterprise,No,No,No
+,company49.example.com,SaaS,Canada,1275,AWS;Python;React,Enterprise,No,Yes,No
+,company50.example.com,Finance,Germany,1300,Azure;Power BI;SQL,Enterprise,No,No,No
+,company51.example.com,Healthcare,USA,1325,GCP;Kubernetes;Python,Enterprise,No,No,Yes
+,company52.example.com,Cybersecurity,India,1350,AWS;Node.js;React,Enterprise,No,No,No
+,company53.example.com,Retail,UK,1375,Azure;Java;Spring Boot,Enterprise,No,No,No
+,company54.example.com,Energy,Canada,1400,GCP;React;PostgreSQL,Enterprise,No,No,No
+,company55.example.com,Education,Germany,1425,AWS;Python;React,Enterprise,No,No,No
+,company56.example.com,Manufacturing,USA,1450,Azure;Power BI;SQL,Enterprise,No,No,Yes
+,company57.example.com,SaaS,India,1475,GCP;Kubernetes;Python,Enterprise,No,Yes,No
+,company58.example.com,Finance,UK,1500,AWS;Node.js;React,Enterprise,No,No,No
+,company59.example.com,Healthcare,Canada,1525,Azure;Java;Spring Boot,Enterprise,No,No,No
+,company60.example.com,Cybersecurity,Germany,1550,GCP;React;PostgreSQL,Enterprise,No,No,No
+,company61.example.com,Retail,USA,1575,AWS;Python;React,Enterprise,No,No,Yes
+,company62.example.com,Energy,India,1600,Azure;Power BI;SQL,Enterprise,No,No,No
+,company63.example.com,Education,UK,1625,GCP;Kubernetes;Python,Enterprise,No,No,No
+,company64.example.com,Manufacturing,Canada,1650,AWS;Node.js;React,Enterprise,No,No,No
+,company65.example.com,SaaS,Germany,1675,Azure;Java;Spring Boot,Enterprise,No,Yes,No
+,company66.example.com,Finance,USA,1700,GCP;React;PostgreSQL,Enterprise,No,No,Yes
+,company67.example.com,Healthcare,India,1725,AWS;Python;React,Enterprise,No,No,No
+,company68.example.com,Cybersecurity,UK,1750,Azure;Power BI;SQL,Enterprise,No,No,No
+,company69.example.com,Retail,Canada,1775,GCP;Kubernetes;Python,Enterprise,No,No,No
+,company70.example.com,Energy,Germany,1800,AWS;Node.js;React,Enterprise,No,No,No
+,company71.example.com,Education,USA,1825,Azure;Java;Spring Boot,Enterprise,No,No,Yes
+,company72.example.com,Manufacturing,India,1850,GCP;React;PostgreSQL,Enterprise,No,No,No
+,company73.example.com,SaaS,UK,1875,AWS;Python;React,Enterprise,No,Yes,No
+,company74.example.com,Finance,Canada,1900,Azure;Power BI;SQL,Enterprise,No,No,No
+,company75.example.com,Healthcare,Germany,1925,GCP;Kubernetes;Python,Enterprise,No,No,No
+,company76.example.com,Cybersecurity,USA,1950,AWS;Node.js;React,Enterprise,No,No,Yes
+,company77.example.com,Retail,India,1975,Azure;Java;Spring Boot,Enterprise,No,No,No
+,company78.example.com,Energy,UK,2000,GCP;React;PostgreSQL,Enterprise,No,No,No
+,company79.example.com,Education,Canada,2025,AWS;Python;React,Enterprise,No,No,No
+,company80.example.com,Manufacturing,Germany,2050,Azure;Power BI;SQL,Enterprise,No,No,No
+,company81.example.com,SaaS,USA,2075,GCP;Kubernetes;Python,Enterprise,No,Yes,Yes
+,company82.example.com,Finance,India,2100,AWS;Node.js;React,Enterprise,No,No,No
+,company83.example.com,Healthcare,UK,2125,Azure;Java;Spring Boot,Enterprise,No,No,No
+,company84.example.com,Cybersecurity,Canada,2150,GCP;React;PostgreSQL,Enterprise,No,No,No
+,company85.example.com,Retail,Germany,2175,AWS;Python;React,Enterprise,No,No,No
+,company86.example.com,Energy,USA,2200,Azure;Power BI;SQL,Enterprise,No,No,Yes
+,company87.example.com,Education,India,2225,GCP;Kubernetes;Python,Enterprise,No,No,No
+,company88.example.com,Manufacturing,UK,2250,AWS;Node.js;React,Enterprise,No,No,No
+,company89.example.com,SaaS,Canada,2275,Azure;Java;Spring Boot,Enterprise,No,Yes,No
+,company90.example.com,Finance,Germany,2300,GCP;React;PostgreSQL,Enterprise,No,No,No
+,company91.example.com,Healthcare,USA,2325,AWS;Python;React,Enterprise,No,No,Yes
+,company92.example.com,Cybersecurity,India,2350,Azure;Power BI;SQL,Enterprise,No,No,No
+,company93.example.com,Retail,UK,2375,GCP;Kubernetes;Python,Enterprise,No,No,No
+,company94.example.com,Energy,Canada,2400,AWS;Node.js;React,Enterprise,No,No,No
+,company95.example.com,Education,Germany,2425,Azure;Java;Spring Boot,Enterprise,No,No,No
+,company96.example.com,Manufacturing,USA,2450,GCP;React;PostgreSQL,Enterprise,No,No,Yes
+,company97.example.com,SaaS,India,2475,AWS;Python;React,Enterprise,No,Yes,No
+,company98.example.com,Finance,UK,2500,Azure;Power BI;SQL,Enterprise,No,No,No
+,company99.example.com,Healthcare,Canada,2525,GCP;Kubernetes;Python,Enterprise,No,No,No
+,company100.example.com,Cybersecurity,Germany,2550,AWS;Node.js;React,Enterprise,No,No,No
