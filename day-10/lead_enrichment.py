@@ -20,7 +20,7 @@ def enrich_company(company):
     technology = company.get("technology", "").lower()
 
     enrichment = { #Create a new dictionary -->Because we don't want to modify the original company record directly.We're creating a new enriched record.
-        "company_name": company.get("company_name", ""),
+        "company_name": company.get("company", ""),
         "website": company.get("website", ""),
         "industry": company.get("industry", ""),
         "country": company.get("country", ""),
