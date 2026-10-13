@@ -1,0 +1,12 @@
+company_name,domain,validation_status,hubspot_company_id,sync_status,details
+Company1,company1.example.com,APPROVED_AI,351579589313,SUCCESS,outreach_message updated and read-back verified
+Company25,company25.example.com,APPROVED_FALLBACK,351581408971,SUCCESS,outreach_message updated and read-back verified
+Company33,company33.example.com,APPROVED_AI,351579779790,SUCCESS,outreach_message updated and read-back verified
+Company41,company41.example.com,APPROVED_FALLBACK,351581408972,SUCCESS,outreach_message updated and read-back verified
+Company49,company49.example.com,APPROVED_FALLBACK,351559952081,SUCCESS,outreach_message updated and read-back verified
+Company57,company57.example.com,APPROVED_AI,351579853537,SUCCESS,outreach_message updated and read-back verified
+Company65,company65.example.com,APPROVED_FALLBACK,351581282041,SUCCESS,outreach_message updated and read-back verified
+Company73,company73.example.com,APPROVED_FALLBACK,351580719842,SUCCESS,outreach_message updated and read-back verified
+Company81,company81.example.com,APPROVED_FALLBACK,351588347603,SUCCESS,outreach_message updated and read-back verified
+Company89,company89.example.com,APPROVED_FALLBACK,351575363292,SUCCESS,outreach_message updated and read-back verified
+Company97,company97.example.com,APPROVED_AI,351580904163,SUCCESS,outreach_message updated and read-back verified

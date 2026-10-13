@@ -1,0 +1,9 @@
+run_id,timestamp_utc,status,leads_processed,approved_messages,review_required,duration_seconds,details
+20261009T162728Z,2026-10-09T16:35:45.282608+00:00,SUCCESS,11,11,0,496.55,Report generated. Human review is required before any live outreach. HubSpot sync was not run.
+20261009T164633Z,2026-10-09T16:54:55.347040+00:00,SUCCESS,11,11,0,502.22,Report generated. Human review is required before any live outreach. HubSpot sync was not run.
+20261013T084939Z,2026-10-13T08:49:39.836092+00:00,FAILED,0,0,0,0,Ollama is unavailable. Check that Ollama is running.
+20261013T085806Z,2026-10-13T09:06:51.454197+00:00,SUCCESS,11,11,0,524.89,Report generated. Human review is required before any live outreach. HubSpot sync was not run.
+20261013T114115Z,2026-10-13T11:51:59.631333+00:00,SUCCESS,11,11,0,643.67,Report generated. Human review is required before any live outreach. HubSpot sync was not run.
+20261013T114943Z,2026-10-13T11:57:01.099649+00:00,SUCCESS,11,11,0,437.26,Report generated. Human review is required before any live outreach. HubSpot sync was not run.
+20261013T122137Z,2026-10-13T12:27:50.238595+00:00,SUCCESS,11,11,0,372.98,Report generated. Human review is required before any live outreach. HubSpot sync was not run.
+20261013T131729Z,2026-10-13T13:27:06.554015+00:00,SUCCESS,11,11,0,576.78,Report generated. Human review is required before any live outreach. HubSpot sync was not run.

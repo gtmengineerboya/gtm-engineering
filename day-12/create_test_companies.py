@@ -24,8 +24,10 @@ with open("../day-11/personalized_leads.csv", newline="", encoding="utf-8-sig") 
         name = lead.get("company_name", "").strip()
         domain = lead.get("website", "").strip()
 
-        if not name or not domain:
+        if not name or not domain: #If the company name or website is missing, skip that lead and move to the next one.
             continue
+        #Remember: continue skips the current iteration; break stops the entire loop.
+        #Without continue, the script would execute 'the remaining code' for that --->lead,so potentially sending incomplete data----> to HubSpot.
 
         response = requests.post(
             URL,

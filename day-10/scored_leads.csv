@@ -1,101 +1,101 @@
 company_name,website,industry,country,employees,technology,employee_segment,ai_signal,saas_signal,target_market,icp_score,qualification
-,company1.example.com,SaaS,USA,75,AWS;Python;React,SMB,No,Yes,Yes,40,Qualified
-,company2.example.com,Finance,India,100,Azure;Power BI;SQL,Growth,No,No,No,10,Not Qualified
-,company3.example.com,Healthcare,UK,125,GCP;Kubernetes;Python,Growth,No,No,No,10,Not Qualified
-,company4.example.com,Cybersecurity,Canada,150,AWS;Node.js;React,Growth,No,No,No,10,Not Qualified
-,company5.example.com,Retail,Germany,175,Azure;Java;Spring Boot,Growth,No,No,No,10,Not Qualified
-,company6.example.com,Energy,USA,200,GCP;React;PostgreSQL,Growth,No,No,Yes,25,Not Qualified
-,company7.example.com,Education,India,225,AWS;Python;React,Growth,No,No,No,10,Not Qualified
-,company8.example.com,Manufacturing,UK,250,Azure;Power BI;SQL,Growth,No,No,No,10,Not Qualified
-,company9.example.com,SaaS,Canada,275,GCP;Kubernetes;Python,Growth,No,Yes,No,35,Not Qualified
-,company10.example.com,Finance,Germany,300,AWS;Node.js;React,Growth,No,No,No,10,Not Qualified
-,company11.example.com,Healthcare,USA,325,Azure;Java;Spring Boot,Growth,No,No,Yes,25,Not Qualified
-,company12.example.com,Cybersecurity,India,350,GCP;React;PostgreSQL,Growth,No,No,No,10,Not Qualified
-,company13.example.com,Retail,UK,375,AWS;Python;React,Growth,No,No,No,10,Not Qualified
-,company14.example.com,Energy,Canada,400,Azure;Power BI;SQL,Growth,No,No,No,10,Not Qualified
-,company15.example.com,Education,Germany,425,GCP;Kubernetes;Python,Growth,No,No,No,10,Not Qualified
-,company16.example.com,Manufacturing,USA,450,AWS;Node.js;React,Growth,No,No,Yes,25,Not Qualified
-,company17.example.com,SaaS,India,475,Azure;Java;Spring Boot,Growth,No,Yes,No,35,Not Qualified
-,company18.example.com,Finance,UK,500,GCP;React;PostgreSQL,Mid-Market,No,No,No,20,Not Qualified
-,company19.example.com,Healthcare,Canada,525,AWS;Python;React,Mid-Market,No,No,No,20,Not Qualified
-,company20.example.com,Cybersecurity,Germany,550,Azure;Power BI;SQL,Mid-Market,No,No,No,20,Not Qualified
-,company21.example.com,Retail,USA,575,GCP;Kubernetes;Python,Mid-Market,No,No,Yes,35,Not Qualified
-,company22.example.com,Energy,India,600,AWS;Node.js;React,Mid-Market,No,No,No,20,Not Qualified
-,company23.example.com,Education,UK,625,Azure;Java;Spring Boot,Mid-Market,No,No,No,20,Not Qualified
-,company24.example.com,Manufacturing,Canada,650,GCP;React;PostgreSQL,Mid-Market,No,No,No,20,Not Qualified
-,company25.example.com,SaaS,Germany,675,AWS;Python;React,Mid-Market,No,Yes,No,45,Qualified
-,company26.example.com,Finance,USA,700,Azure;Power BI;SQL,Mid-Market,No,No,Yes,35,Not Qualified
-,company27.example.com,Healthcare,India,725,GCP;Kubernetes;Python,Mid-Market,No,No,No,20,Not Qualified
-,company28.example.com,Cybersecurity,UK,750,AWS;Node.js;React,Mid-Market,No,No,No,20,Not Qualified
-,company29.example.com,Retail,Canada,775,Azure;Java;Spring Boot,Mid-Market,No,No,No,20,Not Qualified
-,company30.example.com,Energy,Germany,800,GCP;React;PostgreSQL,Mid-Market,No,No,No,20,Not Qualified
-,company31.example.com,Education,USA,825,AWS;Python;React,Mid-Market,No,No,Yes,35,Not Qualified
-,company32.example.com,Manufacturing,India,850,Azure;Power BI;SQL,Mid-Market,No,No,No,20,Not Qualified
-,company33.example.com,SaaS,UK,875,GCP;Kubernetes;Python,Mid-Market,No,Yes,No,45,Qualified
-,company34.example.com,Finance,Canada,900,AWS;Node.js;React,Mid-Market,No,No,No,20,Not Qualified
-,company35.example.com,Healthcare,Germany,925,Azure;Java;Spring Boot,Mid-Market,No,No,No,20,Not Qualified
-,company36.example.com,Cybersecurity,USA,950,GCP;React;PostgreSQL,Mid-Market,No,No,Yes,35,Not Qualified
-,company37.example.com,Retail,India,975,AWS;Python;React,Mid-Market,No,No,No,20,Not Qualified
-,company38.example.com,Energy,UK,1000,Azure;Power BI;SQL,Enterprise,No,No,No,20,Not Qualified
-,company39.example.com,Education,Canada,1025,GCP;Kubernetes;Python,Enterprise,No,No,No,20,Not Qualified
-,company40.example.com,Manufacturing,Germany,1050,AWS;Node.js;React,Enterprise,No,No,No,20,Not Qualified
-,company41.example.com,SaaS,USA,1075,Azure;Java;Spring Boot,Enterprise,No,Yes,Yes,60,Highly Qualified
-,company42.example.com,Finance,India,1100,GCP;React;PostgreSQL,Enterprise,No,No,No,20,Not Qualified
-,company43.example.com,Healthcare,UK,1125,AWS;Python;React,Enterprise,No,No,No,20,Not Qualified
-,company44.example.com,Cybersecurity,Canada,1150,Azure;Power BI;SQL,Enterprise,No,No,No,20,Not Qualified
-,company45.example.com,Retail,Germany,1175,GCP;Kubernetes;Python,Enterprise,No,No,No,20,Not Qualified
-,company46.example.com,Energy,USA,1200,AWS;Node.js;React,Enterprise,No,No,Yes,35,Not Qualified
-,company47.example.com,Education,India,1225,Azure;Java;Spring Boot,Enterprise,No,No,No,20,Not Qualified
-,company48.example.com,Manufacturing,UK,1250,GCP;React;PostgreSQL,Enterprise,No,No,No,20,Not Qualified
-,company49.example.com,SaaS,Canada,1275,AWS;Python;React,Enterprise,No,Yes,No,45,Qualified
-,company50.example.com,Finance,Germany,1300,Azure;Power BI;SQL,Enterprise,No,No,No,20,Not Qualified
-,company51.example.com,Healthcare,USA,1325,GCP;Kubernetes;Python,Enterprise,No,No,Yes,35,Not Qualified
-,company52.example.com,Cybersecurity,India,1350,AWS;Node.js;React,Enterprise,No,No,No,20,Not Qualified
-,company53.example.com,Retail,UK,1375,Azure;Java;Spring Boot,Enterprise,No,No,No,20,Not Qualified
-,company54.example.com,Energy,Canada,1400,GCP;React;PostgreSQL,Enterprise,No,No,No,20,Not Qualified
-,company55.example.com,Education,Germany,1425,AWS;Python;React,Enterprise,No,No,No,20,Not Qualified
-,company56.example.com,Manufacturing,USA,1450,Azure;Power BI;SQL,Enterprise,No,No,Yes,35,Not Qualified
-,company57.example.com,SaaS,India,1475,GCP;Kubernetes;Python,Enterprise,No,Yes,No,45,Qualified
-,company58.example.com,Finance,UK,1500,AWS;Node.js;React,Enterprise,No,No,No,20,Not Qualified
-,company59.example.com,Healthcare,Canada,1525,Azure;Java;Spring Boot,Enterprise,No,No,No,20,Not Qualified
-,company60.example.com,Cybersecurity,Germany,1550,GCP;React;PostgreSQL,Enterprise,No,No,No,20,Not Qualified
-,company61.example.com,Retail,USA,1575,AWS;Python;React,Enterprise,No,No,Yes,35,Not Qualified
-,company62.example.com,Energy,India,1600,Azure;Power BI;SQL,Enterprise,No,No,No,20,Not Qualified
-,company63.example.com,Education,UK,1625,GCP;Kubernetes;Python,Enterprise,No,No,No,20,Not Qualified
-,company64.example.com,Manufacturing,Canada,1650,AWS;Node.js;React,Enterprise,No,No,No,20,Not Qualified
-,company65.example.com,SaaS,Germany,1675,Azure;Java;Spring Boot,Enterprise,No,Yes,No,45,Qualified
-,company66.example.com,Finance,USA,1700,GCP;React;PostgreSQL,Enterprise,No,No,Yes,35,Not Qualified
-,company67.example.com,Healthcare,India,1725,AWS;Python;React,Enterprise,No,No,No,20,Not Qualified
-,company68.example.com,Cybersecurity,UK,1750,Azure;Power BI;SQL,Enterprise,No,No,No,20,Not Qualified
-,company69.example.com,Retail,Canada,1775,GCP;Kubernetes;Python,Enterprise,No,No,No,20,Not Qualified
-,company70.example.com,Energy,Germany,1800,AWS;Node.js;React,Enterprise,No,No,No,20,Not Qualified
-,company71.example.com,Education,USA,1825,Azure;Java;Spring Boot,Enterprise,No,No,Yes,35,Not Qualified
-,company72.example.com,Manufacturing,India,1850,GCP;React;PostgreSQL,Enterprise,No,No,No,20,Not Qualified
-,company73.example.com,SaaS,UK,1875,AWS;Python;React,Enterprise,No,Yes,No,45,Qualified
-,company74.example.com,Finance,Canada,1900,Azure;Power BI;SQL,Enterprise,No,No,No,20,Not Qualified
-,company75.example.com,Healthcare,Germany,1925,GCP;Kubernetes;Python,Enterprise,No,No,No,20,Not Qualified
-,company76.example.com,Cybersecurity,USA,1950,AWS;Node.js;React,Enterprise,No,No,Yes,35,Not Qualified
-,company77.example.com,Retail,India,1975,Azure;Java;Spring Boot,Enterprise,No,No,No,20,Not Qualified
-,company78.example.com,Energy,UK,2000,GCP;React;PostgreSQL,Enterprise,No,No,No,20,Not Qualified
-,company79.example.com,Education,Canada,2025,AWS;Python;React,Enterprise,No,No,No,20,Not Qualified
-,company80.example.com,Manufacturing,Germany,2050,Azure;Power BI;SQL,Enterprise,No,No,No,20,Not Qualified
-,company81.example.com,SaaS,USA,2075,GCP;Kubernetes;Python,Enterprise,No,Yes,Yes,60,Highly Qualified
-,company82.example.com,Finance,India,2100,AWS;Node.js;React,Enterprise,No,No,No,20,Not Qualified
-,company83.example.com,Healthcare,UK,2125,Azure;Java;Spring Boot,Enterprise,No,No,No,20,Not Qualified
-,company84.example.com,Cybersecurity,Canada,2150,GCP;React;PostgreSQL,Enterprise,No,No,No,20,Not Qualified
-,company85.example.com,Retail,Germany,2175,AWS;Python;React,Enterprise,No,No,No,20,Not Qualified
-,company86.example.com,Energy,USA,2200,Azure;Power BI;SQL,Enterprise,No,No,Yes,35,Not Qualified
-,company87.example.com,Education,India,2225,GCP;Kubernetes;Python,Enterprise,No,No,No,20,Not Qualified
-,company88.example.com,Manufacturing,UK,2250,AWS;Node.js;React,Enterprise,No,No,No,20,Not Qualified
-,company89.example.com,SaaS,Canada,2275,Azure;Java;Spring Boot,Enterprise,No,Yes,No,45,Qualified
-,company90.example.com,Finance,Germany,2300,GCP;React;PostgreSQL,Enterprise,No,No,No,20,Not Qualified
-,company91.example.com,Healthcare,USA,2325,AWS;Python;React,Enterprise,No,No,Yes,35,Not Qualified
-,company92.example.com,Cybersecurity,India,2350,Azure;Power BI;SQL,Enterprise,No,No,No,20,Not Qualified
-,company93.example.com,Retail,UK,2375,GCP;Kubernetes;Python,Enterprise,No,No,No,20,Not Qualified
-,company94.example.com,Energy,Canada,2400,AWS;Node.js;React,Enterprise,No,No,No,20,Not Qualified
-,company95.example.com,Education,Germany,2425,Azure;Java;Spring Boot,Enterprise,No,No,No,20,Not Qualified
-,company96.example.com,Manufacturing,USA,2450,GCP;React;PostgreSQL,Enterprise,No,No,Yes,35,Not Qualified
-,company97.example.com,SaaS,India,2475,AWS;Python;React,Enterprise,No,Yes,No,45,Qualified
-,company98.example.com,Finance,UK,2500,Azure;Power BI;SQL,Enterprise,No,No,No,20,Not Qualified
-,company99.example.com,Healthcare,Canada,2525,GCP;Kubernetes;Python,Enterprise,No,No,No,20,Not Qualified
-,company100.example.com,Cybersecurity,Germany,2550,AWS;Node.js;React,Enterprise,No,No,No,20,Not Qualified
+Company1,company1.example.com,SaaS,USA,75,AWS;Python;React,SMB,No,Yes,Yes,40,Qualified
+Company2,company2.example.com,Finance,India,100,Azure;Power BI;SQL,Growth,No,No,No,10,Not Qualified
+Company3,company3.example.com,Healthcare,UK,125,GCP;Kubernetes;Python,Growth,No,No,No,10,Not Qualified
+Company4,company4.example.com,Cybersecurity,Canada,150,AWS;Node.js;React,Growth,No,No,No,10,Not Qualified
+Company5,company5.example.com,Retail,Germany,175,Azure;Java;Spring Boot,Growth,No,No,No,10,Not Qualified
+Company6,company6.example.com,Energy,USA,200,GCP;React;PostgreSQL,Growth,No,No,Yes,25,Not Qualified
+Company7,company7.example.com,Education,India,225,AWS;Python;React,Growth,No,No,No,10,Not Qualified
+Company8,company8.example.com,Manufacturing,UK,250,Azure;Power BI;SQL,Growth,No,No,No,10,Not Qualified
+Company9,company9.example.com,SaaS,Canada,275,GCP;Kubernetes;Python,Growth,No,Yes,No,35,Not Qualified
+Company10,company10.example.com,Finance,Germany,300,AWS;Node.js;React,Growth,No,No,No,10,Not Qualified
+Company11,company11.example.com,Healthcare,USA,325,Azure;Java;Spring Boot,Growth,No,No,Yes,25,Not Qualified
+Company12,company12.example.com,Cybersecurity,India,350,GCP;React;PostgreSQL,Growth,No,No,No,10,Not Qualified
+Company13,company13.example.com,Retail,UK,375,AWS;Python;React,Growth,No,No,No,10,Not Qualified
+Company14,company14.example.com,Energy,Canada,400,Azure;Power BI;SQL,Growth,No,No,No,10,Not Qualified
+Company15,company15.example.com,Education,Germany,425,GCP;Kubernetes;Python,Growth,No,No,No,10,Not Qualified
+Company16,company16.example.com,Manufacturing,USA,450,AWS;Node.js;React,Growth,No,No,Yes,25,Not Qualified
+Company17,company17.example.com,SaaS,India,475,Azure;Java;Spring Boot,Growth,No,Yes,No,35,Not Qualified
+Company18,company18.example.com,Finance,UK,500,GCP;React;PostgreSQL,Mid-Market,No,No,No,20,Not Qualified
+Company19,company19.example.com,Healthcare,Canada,525,AWS;Python;React,Mid-Market,No,No,No,20,Not Qualified
+Company20,company20.example.com,Cybersecurity,Germany,550,Azure;Power BI;SQL,Mid-Market,No,No,No,20,Not Qualified
+Company21,company21.example.com,Retail,USA,575,GCP;Kubernetes;Python,Mid-Market,No,No,Yes,35,Not Qualified
+Company22,company22.example.com,Energy,India,600,AWS;Node.js;React,Mid-Market,No,No,No,20,Not Qualified
+Company23,company23.example.com,Education,UK,625,Azure;Java;Spring Boot,Mid-Market,No,No,No,20,Not Qualified
+Company24,company24.example.com,Manufacturing,Canada,650,GCP;React;PostgreSQL,Mid-Market,No,No,No,20,Not Qualified
+Company25,company25.example.com,SaaS,Germany,675,AWS;Python;React,Mid-Market,No,Yes,No,45,Qualified
+Company26,company26.example.com,Finance,USA,700,Azure;Power BI;SQL,Mid-Market,No,No,Yes,35,Not Qualified
+Company27,company27.example.com,Healthcare,India,725,GCP;Kubernetes;Python,Mid-Market,No,No,No,20,Not Qualified
+Company28,company28.example.com,Cybersecurity,UK,750,AWS;Node.js;React,Mid-Market,No,No,No,20,Not Qualified
+Company29,company29.example.com,Retail,Canada,775,Azure;Java;Spring Boot,Mid-Market,No,No,No,20,Not Qualified
+Company30,company30.example.com,Energy,Germany,800,GCP;React;PostgreSQL,Mid-Market,No,No,No,20,Not Qualified
+Company31,company31.example.com,Education,USA,825,AWS;Python;React,Mid-Market,No,No,Yes,35,Not Qualified
+Company32,company32.example.com,Manufacturing,India,850,Azure;Power BI;SQL,Mid-Market,No,No,No,20,Not Qualified
+Company33,company33.example.com,SaaS,UK,875,GCP;Kubernetes;Python,Mid-Market,No,Yes,No,45,Qualified
+Company34,company34.example.com,Finance,Canada,900,AWS;Node.js;React,Mid-Market,No,No,No,20,Not Qualified
+Company35,company35.example.com,Healthcare,Germany,925,Azure;Java;Spring Boot,Mid-Market,No,No,No,20,Not Qualified
+Company36,company36.example.com,Cybersecurity,USA,950,GCP;React;PostgreSQL,Mid-Market,No,No,Yes,35,Not Qualified
+Company37,company37.example.com,Retail,India,975,AWS;Python;React,Mid-Market,No,No,No,20,Not Qualified
+Company38,company38.example.com,Energy,UK,1000,Azure;Power BI;SQL,Enterprise,No,No,No,20,Not Qualified
+Company39,company39.example.com,Education,Canada,1025,GCP;Kubernetes;Python,Enterprise,No,No,No,20,Not Qualified
+Company40,company40.example.com,Manufacturing,Germany,1050,AWS;Node.js;React,Enterprise,No,No,No,20,Not Qualified
+Company41,company41.example.com,SaaS,USA,1075,Azure;Java;Spring Boot,Enterprise,No,Yes,Yes,60,Highly Qualified
+Company42,company42.example.com,Finance,India,1100,GCP;React;PostgreSQL,Enterprise,No,No,No,20,Not Qualified
+Company43,company43.example.com,Healthcare,UK,1125,AWS;Python;React,Enterprise,No,No,No,20,Not Qualified
+Company44,company44.example.com,Cybersecurity,Canada,1150,Azure;Power BI;SQL,Enterprise,No,No,No,20,Not Qualified
+Company45,company45.example.com,Retail,Germany,1175,GCP;Kubernetes;Python,Enterprise,No,No,No,20,Not Qualified
+Company46,company46.example.com,Energy,USA,1200,AWS;Node.js;React,Enterprise,No,No,Yes,35,Not Qualified
+Company47,company47.example.com,Education,India,1225,Azure;Java;Spring Boot,Enterprise,No,No,No,20,Not Qualified
+Company48,company48.example.com,Manufacturing,UK,1250,GCP;React;PostgreSQL,Enterprise,No,No,No,20,Not Qualified
+Company49,company49.example.com,SaaS,Canada,1275,AWS;Python;React,Enterprise,No,Yes,No,45,Qualified
+Company50,company50.example.com,Finance,Germany,1300,Azure;Power BI;SQL,Enterprise,No,No,No,20,Not Qualified
+Company51,company51.example.com,Healthcare,USA,1325,GCP;Kubernetes;Python,Enterprise,No,No,Yes,35,Not Qualified
+Company52,company52.example.com,Cybersecurity,India,1350,AWS;Node.js;React,Enterprise,No,No,No,20,Not Qualified
+Company53,company53.example.com,Retail,UK,1375,Azure;Java;Spring Boot,Enterprise,No,No,No,20,Not Qualified
+Company54,company54.example.com,Energy,Canada,1400,GCP;React;PostgreSQL,Enterprise,No,No,No,20,Not Qualified
+Company55,company55.example.com,Education,Germany,1425,AWS;Python;React,Enterprise,No,No,No,20,Not Qualified
+Company56,company56.example.com,Manufacturing,USA,1450,Azure;Power BI;SQL,Enterprise,No,No,Yes,35,Not Qualified
+Company57,company57.example.com,SaaS,India,1475,GCP;Kubernetes;Python,Enterprise,No,Yes,No,45,Qualified
+Company58,company58.example.com,Finance,UK,1500,AWS;Node.js;React,Enterprise,No,No,No,20,Not Qualified
+Company59,company59.example.com,Healthcare,Canada,1525,Azure;Java;Spring Boot,Enterprise,No,No,No,20,Not Qualified
+Company60,company60.example.com,Cybersecurity,Germany,1550,GCP;React;PostgreSQL,Enterprise,No,No,No,20,Not Qualified
+Company61,company61.example.com,Retail,USA,1575,AWS;Python;React,Enterprise,No,No,Yes,35,Not Qualified
+Company62,company62.example.com,Energy,India,1600,Azure;Power BI;SQL,Enterprise,No,No,No,20,Not Qualified
+Company63,company63.example.com,Education,UK,1625,GCP;Kubernetes;Python,Enterprise,No,No,No,20,Not Qualified
+Company64,company64.example.com,Manufacturing,Canada,1650,AWS;Node.js;React,Enterprise,No,No,No,20,Not Qualified
+Company65,company65.example.com,SaaS,Germany,1675,Azure;Java;Spring Boot,Enterprise,No,Yes,No,45,Qualified
+Company66,company66.example.com,Finance,USA,1700,GCP;React;PostgreSQL,Enterprise,No,No,Yes,35,Not Qualified
+Company67,company67.example.com,Healthcare,India,1725,AWS;Python;React,Enterprise,No,No,No,20,Not Qualified
+Company68,company68.example.com,Cybersecurity,UK,1750,Azure;Power BI;SQL,Enterprise,No,No,No,20,Not Qualified
+Company69,company69.example.com,Retail,Canada,1775,GCP;Kubernetes;Python,Enterprise,No,No,No,20,Not Qualified
+Company70,company70.example.com,Energy,Germany,1800,AWS;Node.js;React,Enterprise,No,No,No,20,Not Qualified
+Company71,company71.example.com,Education,USA,1825,Azure;Java;Spring Boot,Enterprise,No,No,Yes,35,Not Qualified
+Company72,company72.example.com,Manufacturing,India,1850,GCP;React;PostgreSQL,Enterprise,No,No,No,20,Not Qualified
+Company73,company73.example.com,SaaS,UK,1875,AWS;Python;React,Enterprise,No,Yes,No,45,Qualified
+Company74,company74.example.com,Finance,Canada,1900,Azure;Power BI;SQL,Enterprise,No,No,No,20,Not Qualified
+Company75,company75.example.com,Healthcare,Germany,1925,GCP;Kubernetes;Python,Enterprise,No,No,No,20,Not Qualified
+Company76,company76.example.com,Cybersecurity,USA,1950,AWS;Node.js;React,Enterprise,No,No,Yes,35,Not Qualified
+Company77,company77.example.com,Retail,India,1975,Azure;Java;Spring Boot,Enterprise,No,No,No,20,Not Qualified
+Company78,company78.example.com,Energy,UK,2000,GCP;React;PostgreSQL,Enterprise,No,No,No,20,Not Qualified
+Company79,company79.example.com,Education,Canada,2025,AWS;Python;React,Enterprise,No,No,No,20,Not Qualified
+Company80,company80.example.com,Manufacturing,Germany,2050,Azure;Power BI;SQL,Enterprise,No,No,No,20,Not Qualified
+Company81,company81.example.com,SaaS,USA,2075,GCP;Kubernetes;Python,Enterprise,No,Yes,Yes,60,Highly Qualified
+Company82,company82.example.com,Finance,India,2100,AWS;Node.js;React,Enterprise,No,No,No,20,Not Qualified
+Company83,company83.example.com,Healthcare,UK,2125,Azure;Java;Spring Boot,Enterprise,No,No,No,20,Not Qualified
+Company84,company84.example.com,Cybersecurity,Canada,2150,GCP;React;PostgreSQL,Enterprise,No,No,No,20,Not Qualified
+Company85,company85.example.com,Retail,Germany,2175,AWS;Python;React,Enterprise,No,No,No,20,Not Qualified
+Company86,company86.example.com,Energy,USA,2200,Azure;Power BI;SQL,Enterprise,No,No,Yes,35,Not Qualified
+Company87,company87.example.com,Education,India,2225,GCP;Kubernetes;Python,Enterprise,No,No,No,20,Not Qualified
+Company88,company88.example.com,Manufacturing,UK,2250,AWS;Node.js;React,Enterprise,No,No,No,20,Not Qualified
+Company89,company89.example.com,SaaS,Canada,2275,Azure;Java;Spring Boot,Enterprise,No,Yes,No,45,Qualified
+Company90,company90.example.com,Finance,Germany,2300,GCP;React;PostgreSQL,Enterprise,No,No,No,20,Not Qualified
+Company91,company91.example.com,Healthcare,USA,2325,AWS;Python;React,Enterprise,No,No,Yes,35,Not Qualified
+Company92,company92.example.com,Cybersecurity,India,2350,Azure;Power BI;SQL,Enterprise,No,No,No,20,Not Qualified
+Company93,company93.example.com,Retail,UK,2375,GCP;Kubernetes;Python,Enterprise,No,No,No,20,Not Qualified
+Company94,company94.example.com,Energy,Canada,2400,AWS;Node.js;React,Enterprise,No,No,No,20,Not Qualified
+Company95,company95.example.com,Education,Germany,2425,Azure;Java;Spring Boot,Enterprise,No,No,No,20,Not Qualified
+Company96,company96.example.com,Manufacturing,USA,2450,GCP;React;PostgreSQL,Enterprise,No,No,Yes,35,Not Qualified
+Company97,company97.example.com,SaaS,India,2475,AWS;Python;React,Enterprise,No,Yes,No,45,Qualified
+Company98,company98.example.com,Finance,UK,2500,Azure;Power BI;SQL,Enterprise,No,No,No,20,Not Qualified
+Company99,company99.example.com,Healthcare,Canada,2525,GCP;Kubernetes;Python,Enterprise,No,No,No,20,Not Qualified
+Company100,company100.example.com,Cybersecurity,Germany,2550,AWS;Node.js;React,Enterprise,No,No,No,20,Not Qualified
