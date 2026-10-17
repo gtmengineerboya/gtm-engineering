@@ -1,0 +1,14 @@
+{
+  "funnel_counts": {
+    "lead": 1000,
+    "mql": 300,
+    "sql": 150,
+    "opportunity": 60,
+    "customer": 15
+  },
+  "sales_marketing_spend_usd": 45000,
+  "monthly_recurring_revenue_usd": 24000,
+  "average_customer_lifetime_months": 24,
+  "average_deal_value_usd": 8000,
+  "average_sales_cycle_days": 60
+}

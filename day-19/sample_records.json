@@ -1,0 +1,20 @@
+[
+  {
+    "company_name": "Northstar Labs",
+    "industry": "Software",
+    "country": "USA",
+    "employees": 120,
+    "employee_segment": "Growth",
+    "technology": "CRM;SQL",
+    "icp_score": 82
+  },
+  {
+    "company_name": "Harbor Analytics",
+    "industry": "Analytics",
+    "country": "Canada",
+    "employees": 45,
+    "employee_segment": "SMB",
+    "technology": "Python",
+    "icp_score": 57
+  }
+]

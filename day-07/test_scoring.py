@@ -1,4 +1,5 @@
-#How good is this lead according to our predefined ICP rules?”from advanced_scoring import calculate_score
+# How good is this lead according to our predefined ICP rules?
+from advanced_scoring import calculate_score
 
 
 companies = [
@@ -215,9 +216,18 @@ for company in companies:
 
     print(
         company["company"],
-        "→",
+        "->",
         score,#we taking this value from --->advanced_scroring.py file
         "/ 100"
     )
+
+assert calculate_score({
+    "industry": "SaaS",
+    "employees": 750,
+    "country": "USA",
+    "job_title": "VP Sales",
+    "technology": "AWS;Python",
+    "buying_signal": "Demo Request",
+}) == 100
 
 print("\nTesting completed.")

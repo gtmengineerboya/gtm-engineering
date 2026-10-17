@@ -1,0 +1,174 @@
+{
+  "name": "Local GTM pipeline - manual run",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual-start",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8000/run-pipeline",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "start-run",
+      "name": "Start one pipeline run",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [480, 300],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "amount": 3,
+        "unit": "seconds"
+      },
+      "id": "wait",
+      "name": "Wait before checking status",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [700, 300]
+    },
+    {
+      "parameters": {
+        "url": "={{ 'http://127.0.0.1:8000/run-status/' + $node['Start one pipeline run'].json.run_id }}",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "get-status",
+      "name": "Check this run",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [920, 300],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "running",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      },
+      "id": "is-running",
+      "name": "Still running?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [1140, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "success",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      },
+      "id": "succeeded",
+      "name": "Pipeline succeeded?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [1360, 400]
+    },
+    {
+      "parameters": {},
+      "id": "success-output",
+      "name": "Pipeline succeeded",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [1580, 340]
+    },
+    {
+      "parameters": {},
+      "id": "failure-output",
+      "name": "Pipeline failed",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [1580, 460]
+    },
+    {
+      "parameters": {},
+      "id": "trigger-error-output",
+      "name": "Trigger failed - inspect error",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [700, 520]
+    },
+    {
+      "parameters": {},
+      "id": "status-error-output",
+      "name": "Status request failed - inspect error",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [1140, 520]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [[{"node": "Start one pipeline run", "type": "main", "index": 0}]]
+    },
+    "Start one pipeline run": {
+      "main": [
+        [{"node": "Wait before checking status", "type": "main", "index": 0}],
+        [{"node": "Trigger failed - inspect error", "type": "main", "index": 0}]
+      ]
+    },
+    "Wait before checking status": {
+      "main": [[{"node": "Check this run", "type": "main", "index": 0}]]
+    },
+    "Check this run": {
+      "main": [
+        [{"node": "Still running?", "type": "main", "index": 0}],
+        [{"node": "Status request failed - inspect error", "type": "main", "index": 0}]
+      ]
+    },
+    "Still running?": {
+      "main": [
+        [{"node": "Wait before checking status", "type": "main", "index": 0}],
+        [{"node": "Pipeline succeeded?", "type": "main", "index": 0}]
+      ]
+    },
+    "Pipeline succeeded?": {
+      "main": [
+        [{"node": "Pipeline succeeded", "type": "main", "index": 0}],
+        [{"node": "Pipeline failed", "type": "main", "index": 0}]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionTimeout": 900
+  },
+  "versionId": "7b3e9576-4f09-49e2-a329-6c06e016c29f"
+}

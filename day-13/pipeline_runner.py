@@ -10,6 +10,10 @@ from urllib.request import urlopen
 from urllib.error import URLError
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
+from gtm_engine.security import redact_sensitive_text
+
 INPUT_FILE = ROOT / "day-10" / "scored_leads.csv"
 OUTREACH_SCRIPT = ROOT / "day-11" / "personalized_outreach.py"
 REVIEW_FILE = ROOT / "day-11" / "outreach_review.csv"
@@ -55,7 +59,7 @@ def log_run(run_id, status, processed=0, approved=0,
             "approved_messages": approved,
             "review_required": review_required,
             "duration_seconds": round(duration, 2),
-            "details": details,
+            "details": redact_sensitive_text(details),
         })
 
 
@@ -210,7 +214,10 @@ if __name__ == "__main__":
     try:
         main()
     except Exception as exc:
-        print(f"\nPIPELINE FAILED: {exc}", file=sys.stderr)
+        print(
+            f"\nPIPELINE FAILED: {redact_sensitive_text(str(exc))}",
+            file=sys.stderr,
+        )
         try:
             log_run(
                 run_id=datetime.now(timezone.utc).strftime(

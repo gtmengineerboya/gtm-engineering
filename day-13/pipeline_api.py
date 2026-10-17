@@ -11,6 +11,9 @@ from fastapi import FastAPI, HTTPException
 
 ROOT = Path(__file__).resolve().parent.parent
 PIPELINE = ROOT / "day-13" / "pipeline_runner.py"
+sys.path.insert(0, str(ROOT))
+
+from gtm_engine.security import redact_sensitive_text
 
 app = FastAPI(title="GTM Pipeline API")
 
@@ -38,8 +41,8 @@ def execute_pipeline(run_id):
             runs[run_id].update({
                 "status": "success" if result.returncode == 0 else "failed",
                 "return_code": result.returncode,
-                "stdout": result.stdout[-4000:],
-                "stderr": result.stderr[-4000:],
+                "stdout": redact_sensitive_text(result.stdout[-4000:]),
+                "stderr": redact_sensitive_text(result.stderr[-4000:]),
             })
     except subprocess.TimeoutExpired:
         with lock:
@@ -51,7 +54,7 @@ def execute_pipeline(run_id):
         with lock:
             runs[run_id].update({
                 "status": "failed",
-                "error": str(exc),
+                "error": redact_sensitive_text(str(exc)),
             })
 
 
@@ -84,4 +87,3 @@ def run_status(run_id: str):
         raise HTTPException(status_code=404, detail="Run ID not found")
 
     return {"run_id": run_id, **run}
-
