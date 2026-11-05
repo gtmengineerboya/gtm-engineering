@@ -48,12 +48,13 @@ def qualify_lead(score):
         return "Not Qualified"
 
 
-for lead in leads:
+if __name__ == "__main__":
+    for lead in leads:
 
-    score = calculate_score(lead)
-    qualification = qualify_lead(score)
+        score = calculate_score(lead)
+        qualification = qualify_lead(score)
 
-    print("--------------------")
-    print("Company:", lead["company"])
-    print("ICP Score:", score)
-    print("Qualification:", qualification)
+        print("--------------------")
+        print("Company:", lead["company"])
+        print("ICP Score:", score)
+        print("Qualification:", qualification)

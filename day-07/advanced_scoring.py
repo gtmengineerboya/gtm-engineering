@@ -215,28 +215,29 @@ company = {
 # 4. Calculate Score
 # ---------------------------------
 
-score = calculate_score(company)
+if __name__ == "__main__":
+    score = calculate_score(company)
 
 
-# ---------------------------------
-# 5. Get Score Explanation
-# ---------------------------------
+    # ---------------------------------
+    # 5. Get Score Explanation
+    # ---------------------------------
 
-reasons = explain_score(company)
+    reasons = explain_score(company)
 
 
-# ---------------------------------
-# 6. Display Results
-# ---------------------------------
+    # ---------------------------------
+    # 6. Display Results
+    # ---------------------------------
 
-print("================================")
-print("GTM ICP SCORING")
-print("================================")
+    print("================================")
+    print("GTM ICP SCORING")
+    print("================================")
 
-print("Company:", company["company"])
-print("ICP Score:", score, "/ 100")
+    print("Company:", company["company"])
+    print("ICP Score:", score, "/ 100")
 
-print("\nWhy this lead received", score, "/ 100:")
+    print("\nWhy this lead received", score, "/ 100:")
 
-for reason in reasons:
-    print("-", reason)
+    for reason in reasons:
+        print("-", reason)

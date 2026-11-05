@@ -4,57 +4,63 @@ import requests
 from dotenv import load_dotenv
 
 # Load HubSpot credentials
-load_dotenv("day-09/.env")
+from pathlib import Path
+import sys
 
-token = os.getenv("HUBSPOT_ACCESS_TOKEN")
+ROOT_DIR = Path(__file__).resolve().parent.parent  # repo root, independent of the working folder
 
-if not token:
-    print("ERROR: HubSpot token not found.")
-    exit()
+if __name__ == "__main__":
+    load_dotenv(str(ROOT_DIR / "day-09/.env"))
 
-# HubSpot Contacts API
-url = "https://api.hubapi.com/crm/v3/objects/contacts"
+    token = os.getenv("HUBSPOT_ACCESS_TOKEN")
 
-headers = {
-    "Authorization": f"Bearer {token}",
-    "Content-Type": "application/json"
-}
+    if not token:
+        print("ERROR: HubSpot token not found.")
+        sys.exit(1)
 
-# Read GTM leads
-with open(
-    "day-08/crm_ready_leads.csv",
-    "r",
-    newline="",
-    encoding="utf-8"
-) as file:
+    # HubSpot Contacts API
+    url = "https://api.hubapi.com/crm/v3/objects/contacts"
 
-    reader = csv.DictReader(file)
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json"
+    }
 
-    # Send each lead to HubSpot
-    for lead in reader:
+    # Read GTM leads
+    with open(
+        str(ROOT_DIR / "day-08/crm_ready_leads.csv"),
+        "r",
+        newline="",
+        encoding="utf-8"
+    ) as file:
 
-        payload = {
-            "properties": {
-                "firstname": lead["company"],
-                "jobtitle": lead["job_title"]
+        reader = csv.DictReader(file)
+
+        # Send each lead to HubSpot
+        for lead in reader:
+
+            payload = {
+                "properties": {
+                    "firstname": lead["company"],
+                    "jobtitle": lead["job_title"]
+                }
             }
-        }
 
-        response = requests.post(
-            url,
-            headers=headers,
-            json=payload
-        )
+            response = requests.post(
+                url,
+                headers=headers,
+                json=payload, timeout=30
+            )
 
-        print("--------------------------------")
-        print("Company:", lead["company"])
-        print("Status Code:", response.status_code)
+            print("--------------------------------")
+            print("Company:", lead["company"])
+            print("Status Code:", response.status_code)
 
-        if response.status_code == 201:
-            print("HubSpot Contact: CREATED")
-        else:
-            print("HubSpot Contact: FAILED")
-            print(response.text)
+            if response.status_code == 201:
+                print("HubSpot Contact: CREATED")
+            else:
+                print("HubSpot Contact: FAILED")
+                print(response.text)
 
-print("--------------------------------")
-print("CSV → HubSpot process completed.")
+    print("--------------------------------")
+    print("CSV → HubSpot process completed.")

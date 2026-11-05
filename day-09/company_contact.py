@@ -2,13 +2,24 @@ import os
 import requests
 from dotenv import load_dotenv
 
-load_dotenv("day-09/.env")
+from pathlib import Path
+import sys
+
+ROOT_DIR = Path(__file__).resolve().parent.parent  # repo root, independent of the working folder
+
+if __name__ != "__main__":
+    raise ImportError(
+        "company_contact.py is a lesson script, not a library: run it directly. "
+        "Importing it would execute it, and it may call external services."
+    )
+
+load_dotenv(str(ROOT_DIR / "day-09/.env"))
 
 token = os.getenv("HUBSPOT_ACCESS_TOKEN")
 
 if not token:
     print("ERROR: HubSpot token not found.")
-    exit()
+    sys.exit(1)
 
 headers = {
     "Authorization": f"Bearer {token}",
@@ -30,7 +41,7 @@ company_payload = {
 company_response = requests.post(
     company_url,
     headers=headers,
-    json=company_payload
+    json=company_payload, timeout=30
 )
 
 print("Company Status:", company_response.status_code)
@@ -38,7 +49,7 @@ print("Company Status:", company_response.status_code)
 if company_response.status_code != 201:
     print("Company creation failed.")
     print(company_response.text)
-    exit()
+    sys.exit(1)
 
 company_id = company_response.json()["id"]
 
@@ -60,7 +71,7 @@ contact_payload = {
 contact_response = requests.post(
     contact_url,
     headers=headers,
-    json=contact_payload
+    json=contact_payload, timeout=30
 )
 
 print("Contact Status:", contact_response.status_code)
@@ -68,7 +79,7 @@ print("Contact Status:", contact_response.status_code)
 if contact_response.status_code != 201:
     print("Contact creation failed.")
     print(contact_response.text)
-    exit()
+    sys.exit(1)
 
 contact_id = contact_response.json()["id"]
 
@@ -94,7 +105,7 @@ association_payload = [
 association_response = requests.put(
     association_url,
     headers=headers,
-    json=association_payload
+    json=association_payload, timeout=30
 )
 
 print("Association Status:", association_response.status_code)

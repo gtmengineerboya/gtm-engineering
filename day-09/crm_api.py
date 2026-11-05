@@ -9,12 +9,13 @@ payload = { #payload is the lead data we send to the CRM API
     "lead_status": "Hot"
 }
 
-response = requests.post(
-    url,
-    json=payload
-)
+if __name__ == "__main__":
+    response = requests.post(
+        url,
+        json=payload, timeout=30
+    )
 
-print("Status Code:", response.status_code) #response is the answer returned by the API.
+    print("Status Code:", response.status_code) #response is the answer returned by the API.
 
-print("CRM Response:")
-print(response.json())
+    print("CRM Response:")
+    print(response.json())

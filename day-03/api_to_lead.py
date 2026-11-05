@@ -3,22 +3,23 @@ import requests
 
 url = "https://jsonplaceholder.typicode.com/users/1"
 
-response = requests.get(url)
+if __name__ == "__main__":
+    response = requests.get(url, timeout=30)
 
-if response.status_code == 200:
+    if response.status_code == 200:
 
-    data = response.json()
+        data = response.json()
 
-    lead = {
-        "name": data["name"],
-        "email": data["email"],
-        "company": data["company"]["name"]
-    }
+        lead = {
+            "name": data["name"],
+            "email": data["email"],
+            "company": data["company"]["name"]
+        }
 
-    print("Lead:")
-    print(lead)
+        print("Lead:")
+        print(lead)
 
-else:
+    else:
 
-    print("API request failed")
-    print("Status:", response.status_code)
+        print("API request failed")
+        print("Status:", response.status_code)

@@ -94,10 +94,20 @@ import requests
 # 1. Read AI-enriched leads
 # ---------------------------------
 
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parent.parent  # repo root, independent of the working folder
+
+if __name__ != "__main__":
+    raise ImportError(
+        "personalized_outreach.py is a lesson script, not a library: run it directly. "
+        "Importing it would execute it, and it may call external services."
+    )
+
 leads = []
 
 with open(
-    "day-06/ai_enriched_leads.csv",
+    str(ROOT_DIR / "day-06/ai_enriched_leads.csv"),
     "r",
     newline="",
     encoding="utf-8"
@@ -142,7 +152,7 @@ for lead in top_leads:
 # ---------------------------------
 
 output_file = open(
-    "day-06/personalized_leads.csv",
+    str(ROOT_DIR / "day-06/personalized_leads.csv"),
     "w",
     newline="",
     encoding="utf-8"
@@ -243,7 +253,7 @@ Important:
 
     response = requests.post(
         url,
-        json=payload
+        json=payload, timeout=120
     )
 
 
@@ -300,5 +310,5 @@ output_file.close()
 print("\n================================")
 print("Top 10 personalization completed.")
 print("Output saved to:")
-print("day-06/personalized_leads.csv")
+print(str(ROOT_DIR / "day-06/personalized_leads.csv"))
 print("================================")

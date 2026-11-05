@@ -1,9 +1,11 @@
+-- Funnel counts are CUMULATIVE: a lead who is now a Customer also passed
+-- through MQL, SQL and Opportunity, so they count at every earlier stage.
 WITH funnel AS (
     SELECT
         COUNT(*) AS lead_count,
-        SUM(CASE WHEN lifecycle_stage = 'MQL' THEN 1 ELSE 0 END) AS mql_count,
-        SUM(CASE WHEN lifecycle_stage = 'SQL' THEN 1 ELSE 0 END) AS sql_count,
-        SUM(CASE WHEN lifecycle_stage = 'Opportunity' THEN 1 ELSE 0 END) AS opportunity_count,
+        SUM(CASE WHEN lifecycle_stage IN ('MQL','SQL','Opportunity','Customer') THEN 1 ELSE 0 END) AS mql_count,
+        SUM(CASE WHEN lifecycle_stage IN ('SQL','Opportunity','Customer') THEN 1 ELSE 0 END) AS sql_count,
+        SUM(CASE WHEN lifecycle_stage IN ('Opportunity','Customer') THEN 1 ELSE 0 END) AS opportunity_count,
         SUM(CASE WHEN lifecycle_stage = 'Customer' THEN 1 ELSE 0 END) AS customer_count
     FROM leads
 )

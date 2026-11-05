@@ -7,10 +7,20 @@ import json
 # 1. Read AI research results
 # ---------------------------------
 
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parent.parent  # repo root, independent of the working folder
+
+if __name__ != "__main__":
+    raise ImportError(
+        "ai_personalization.py is a lesson script, not a library: run it directly. "
+        "Importing it would execute it, and it may call external services."
+    )
+
 leads = []
 
 with open(
-    "day-08/ai_research_results.csv",
+    str(ROOT_DIR / "day-08/ai_research_results.csv"),
     "r",
     newline="",
     encoding="utf-8"
@@ -27,7 +37,7 @@ with open(
 # ---------------------------------
 
 with open(
-    "day-08/personalized_outreach.csv",
+    str(ROOT_DIR / "day-08/personalized_outreach.csv"),
     "w",
     newline="",
     encoding="utf-8"
@@ -138,7 +148,7 @@ Rules:
 
         response = requests.post(
             url,
-            json=payload
+            json=payload, timeout=120
         )
 
 
@@ -227,5 +237,5 @@ print("\n================================")
 print("AI personalization completed.")
 print("Processed leads:", len(leads))
 print("Output:")
-print("day-08/personalized_outreach.csv")
+print(str(ROOT_DIR / "day-08/personalized_outreach.csv"))
 print("================================")

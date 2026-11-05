@@ -96,63 +96,68 @@
 import csv
 import requests
 
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parent.parent  # repo root, independent of the working folder
+
 url = "https://jsonplaceholder.typicode.com/posts" #JSONPlaceholder is the fake/test API we used in Day 9.
 
 success_count = 0  #Now we'll make the pipeline report how many leads succeeded and failed.s
 failed_count = 0
 
-with open(
-    "day-08/crm_ready_leads.csv",
-    "r",
-    newline="",
-    encoding="utf-8"
-) as file:
+if __name__ == "__main__":
+    with open(
+        str(ROOT_DIR / "day-08/crm_ready_leads.csv"),
+        "r",
+        newline="",
+        encoding="utf-8"
+    ) as file:
 
-    reader = csv.DictReader(file)
+        reader = csv.DictReader(file)
 
-    for lead in reader:
+        for lead in reader:
 
-        payload = {
-            "company": lead["company"],
-            "job_title": lead["job_title"],
-            "icp_score": lead["icp_score"],
-            "lead_status": lead["lead_status"],
-            "outreach_message": lead["outreach_message"]
-        }
+            payload = {
+                "company": lead["company"],
+                "job_title": lead["job_title"],
+                "icp_score": lead["icp_score"],
+                "lead_status": lead["lead_status"],
+                "outreach_message": lead["outreach_message"]
+            }
 
-        try:
-            response = requests.post(
-                url,
-                json=payload,
-                timeout=10
-            )
+            try:
+                response = requests.post(
+                    url,
+                    json=payload,
+                    timeout=10
+                )
 
-            if response.status_code == 201:
-                success_count += 1
+                if response.status_code == 201:
+                    success_count += 1
 
-                print("--------------------------------")
-                print("Company:", lead["company"])
-                print("Upload: SUCCESS")
+                    print("--------------------------------")
+                    print("Company:", lead["company"])
+                    print("Upload: SUCCESS")
 
-            else:
+                else:
+                    failed_count += 1
+
+                    print("--------------------------------")
+                    print("Company:", lead["company"])
+                    print("Upload: FAILED")
+
+            except requests.exceptions.RequestException as error:
                 failed_count += 1
 
                 print("--------------------------------")
                 print("Company:", lead["company"])
                 print("Upload: FAILED")
-
-        except requests.exceptions.RequestException as error:
-            failed_count += 1
-
-            print("--------------------------------")
-            print("Company:", lead["company"])
-            print("Upload: FAILED")
-            print("Error:", error)
+                print("Error:", error)
 
 
-print("\n================================")
-print("CRM UPLOAD SUMMARY")
-print("================================")
-print("Successful:", success_count)
-print("Failed:", failed_count)
-print("Total:", success_count + failed_count)
+    print("\n================================")
+    print("CRM UPLOAD SUMMARY")
+    print("================================")
+    print("Successful:", success_count)
+    print("Failed:", failed_count)
+    print("Total:", success_count + failed_count)

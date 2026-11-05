@@ -17,6 +17,12 @@ from dotenv import load_dotenv
 #load_dotenv(ENV_FILE) — loads the variables stored in that file.
 
 # Load the token from the project's existing .env file.
+if __name__ != "__main__":
+    raise ImportError(
+        "check_hubspot_properties.py is a lesson script, not a library: run it directly. "
+        "Importing it would execute it, and it may call external services."
+    )
+
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 ENV_FILE = PROJECT_DIR / "day-09" / ".env"
 load_dotenv(ENV_FILE)

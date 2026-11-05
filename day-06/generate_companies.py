@@ -1,5 +1,9 @@
 import csv
 
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parent.parent  # repo root, independent of the working folder
+
 industries = [
     "SaaS",
     "Finance",
@@ -37,32 +41,33 @@ job_titles = [
     "Revenue Operations Manager"
 ]
 
-with open("day-06/companies.csv", "w", newline="") as file:
-# writer--># the CSV writing tool     Imagine you have a blank notebook==> Notebook = companies.csv,  Pen  = writer
-    writer = csv.writer(file) 
-# .writerow()--># write ONE row into the CSV file.
-    writer.writerow([ 
-        "company",
-        "website",
-        "industry",
-        "employees",
-        "country",
-        "technology",
-        "job_title"
-    ])
-
-    for i in range(1, 101):
-
-        company = f"Company{i}" #f"Company{i}"-->replace {i}-->Company1 ('f' tells Python to evaluate whatever is inside {}.)
-
-        writer.writerow([
-            company,
-            f"company{i}.example.com",
-            industries[(i - 1) % len(industries)],
-            50 + (i * 25),
-            countries[(i - 1) % len(countries)],
-            technologies[(i - 1) % len(technologies)],
-            job_titles[(i - 1) % len(job_titles)]
+if __name__ == "__main__":
+    with open(str(ROOT_DIR / "day-06/companies.csv"), "w", newline="") as file:
+    # writer--># the CSV writing tool     Imagine you have a blank notebook==> Notebook = companies.csv,  Pen  = writer
+        writer = csv.writer(file) 
+    # .writerow()--># write ONE row into the CSV file.
+        writer.writerow([ 
+            "company",
+            "website",
+            "industry",
+            "employees",
+            "country",
+            "technology",
+            "job_title"
         ])
 
-print("100 synthetic companies created successfully.")
+        for i in range(1, 101):
+
+            company = f"Company{i}" #f"Company{i}"-->replace {i}-->Company1 ('f' tells Python to evaluate whatever is inside {}.)
+
+            writer.writerow([
+                company,
+                f"company{i}.example.com",
+                industries[(i - 1) % len(industries)],
+                50 + (i * 25),
+                countries[(i - 1) % len(countries)],
+                technologies[(i - 1) % len(technologies)],
+                job_titles[(i - 1) % len(job_titles)]
+            ])
+
+    print("100 synthetic companies created successfully.")
