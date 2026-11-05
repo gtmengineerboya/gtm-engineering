@@ -8,7 +8,7 @@ from gtm_engine.crm import normalize_domain, normalize_email
 
 
 def normalize_name(value: str) -> str:
-    return re.sub(r"[^a-z0-9]", "", (value or "").casefold())
+    return re.sub(r"[^a-zA-Z0-9]", "", value or "")
 
 
 def review_duplicates(
