@@ -206,28 +206,29 @@ companies = [
 ]
 
 
-print("================================")
-print("20 COMPANY SCORING TEST")
-print("================================")
+if __name__ == "__main__":
+    print("================================")
+    print("20 COMPANY SCORING TEST")
+    print("================================")
 
-for company in companies:
+    for company in companies:
 
-    score = calculate_score(company)
+        score = calculate_score(company)
 
-    print(
-        company["company"],
-        "->",
-        score,#we taking this value from --->advanced_scroring.py file
-        "/ 100"
-    )
+        print(
+            company["company"],
+            "->",
+            score,#we taking this value from --->advanced_scroring.py file
+            "/ 100"
+        )
 
-assert calculate_score({
-    "industry": "SaaS",
-    "employees": 750,
-    "country": "USA",
-    "job_title": "VP Sales",
-    "technology": "AWS;Python",
-    "buying_signal": "Demo Request",
-}) == 100
+    assert calculate_score({
+        "industry": "SaaS",
+        "employees": 750,
+        "country": "USA",
+        "job_title": "VP Sales",
+        "technology": "AWS;Python",
+        "buying_signal": "Demo Request",
+    }) == 100
 
-print("\nTesting completed.")
+    print("\nTesting completed.")

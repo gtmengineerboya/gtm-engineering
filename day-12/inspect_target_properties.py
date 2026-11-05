@@ -5,6 +5,12 @@ from pathlib import Path
 import requests
 from dotenv import load_dotenv
 
+if __name__ != "__main__":
+    raise ImportError(
+        "inspect_target_properties.py is a lesson script, not a library: run it directly. "
+        "Importing it would execute it, and it may call external services."
+    )
+
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(PROJECT_DIR / "day-09" / ".env")
 

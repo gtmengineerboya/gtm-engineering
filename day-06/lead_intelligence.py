@@ -69,6 +69,10 @@
 
 import csv
 
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parent.parent  # repo root, independent of the working folder
+
 def calculate_score(company):
     score = 0
 
@@ -95,52 +99,53 @@ def calculate_priority(score):
         return "Low"
 
 
-with open("day-06/companies.csv", "r", newline="") as file:
+if __name__ == "__main__":
+    with open(str(ROOT_DIR / "day-06/companies.csv"), "r", newline="") as file:
 
-    reader = csv.DictReader(file) # reader-->contains the CSV rows.
-    #CSV → Python dictionaries
-    with open("day-06/enriched_leads.csv", "w", newline="") as output_file: #output_file represents:day-06/enriched_leads.csv
+        reader = csv.DictReader(file) # reader-->contains the CSV rows.
+        #CSV → Python dictionaries
+        with open(str(ROOT_DIR / "day-06/enriched_leads.csv"), "w", newline="") as output_file: #output_file represents:day-06/enriched_leads.csv
 
-        fieldnames = [
-            "company",
-            "website",
-            "industry",
-            "employees",
-            "country",
-            "technology",
-            "job_title",
-            "icp_score",
-            "qualification",
-            "priority"
-        ]
+            fieldnames = [
+                "company",
+                "website",
+                "industry",
+                "employees",
+                "country",
+                "technology",
+                "job_title",
+                "icp_score",
+                "qualification",
+                "priority"
+            ]
 
-        writer = csv.DictWriter(output_file, fieldnames=fieldnames) ##Python dictionaries → CSV
-        #imp--->Create a CSV writing tool that will take Python dictionaries and write them into output_file using the column names in fieldnames.
-        writer.writeheader() # This create header--> company,website,industry,employees,country,technology,job_title,icp_score,qualification
+            writer = csv.DictWriter(output_file, fieldnames=fieldnames) ##Python dictionaries → CSV
+            #imp--->Create a CSV writing tool that will take Python dictionaries and write them into output_file using the column names in fieldnames.
+            writer.writeheader() # This create header--> company,website,industry,employees,country,technology,job_title,icp_score,qualification
 
-        for company in reader:
+            for company in reader:
 
-            score = calculate_score(company)
+                score = calculate_score(company)
 
-            if score >= 50: #This is your business rule.
-                qualification = "Qualified"
-            else:
-                qualification = "Not Qualified"
+                if score >= 50: #This is your business rule.
+                    qualification = "Qualified"
+                else:
+                    qualification = "Not Qualified"
 
-            priority = calculate_priority(score)
+                priority = calculate_priority(score)
             
-            writer.writerow({ #Now you write one dictionary into the output CSV.
-                "company": company["company"],
-                "website": company["website"],
-                "industry": company["industry"],
-                "employees": company["employees"],
-                "country": company["country"],
-                "technology": company["technology"],
-                "job_title": company["job_title"],
-                "icp_score": score,
-                "qualification": qualification,
-                "priority": priority
-            })
+                writer.writerow({ #Now you write one dictionary into the output CSV.
+                    "company": company["company"],
+                    "website": company["website"],
+                    "industry": company["industry"],
+                    "employees": company["employees"],
+                    "country": company["country"],
+                    "technology": company["technology"],
+                    "job_title": company["job_title"],
+                    "icp_score": score,
+                    "qualification": qualification,
+                    "priority": priority
+                })
 
-print("Lead intelligence processing completed.")
-print("Output saved to day-06/enriched_leads.csv")
+    print("Lead intelligence processing completed.")
+    print("Output saved to day-06/enriched_leads.csv")

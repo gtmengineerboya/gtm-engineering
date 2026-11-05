@@ -1,8 +1,10 @@
 import csv
+from pathlib import Path
 
+DAY_DIR = Path(__file__).resolve().parent  # this lesson's folder, whatever folder you run from
 
-INPUT_FILE = "enriched_leads.csv"
-OUTPUT_FILE = "scored_leads.csv"
+INPUT_FILE = str(DAY_DIR / "enriched_leads.csv")
+OUTPUT_FILE = str(DAY_DIR / "scored_leads.csv")
 
 
 def calculate_icp_score(company):

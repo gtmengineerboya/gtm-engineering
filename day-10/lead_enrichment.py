@@ -2,8 +2,12 @@ import csv
 import os #os lets Python interact with the operating system.
 
 
-INPUT_FILE = "../day-06/companies.csv"
-OUTPUT_FILE = "enriched_leads.csv" #This means the new file will be created inside the current day-10 folder.
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parent.parent  # repo root, independent of the working folder
+
+INPUT_FILE = str(ROOT_DIR / "day-06/companies.csv")
+OUTPUT_FILE = str(Path(__file__).resolve().parent / "enriched_leads.csv") #This means the new file will be created inside the current day-10 folder.
 
 
 def enrich_company(company):

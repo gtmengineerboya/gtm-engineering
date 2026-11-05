@@ -4,41 +4,46 @@ import os
 import requests
 from dotenv import load_dotenv
 
-load_dotenv("../day-09/.env")
+from pathlib import Path
 
-TOKEN = os.getenv("HUBSPOT_ACCESS_TOKEN") or os.getenv("HUBSPOT_TOKEN")
+ROOT_DIR = Path(__file__).resolve().parent.parent  # repo root, independent of the working folder
 
-if not TOKEN:
-    raise RuntimeError("HubSpot token not found.")
+if __name__ == "__main__":
+    load_dotenv(str(ROOT_DIR / "day-09/.env"))
 
-URL = "https://api.hubapi.com/crm/v3/objects/companies"
-HEADERS = {
-    "Authorization": f"Bearer {TOKEN}",
-    "Content-Type": "application/json",
-}
+    TOKEN = os.getenv("HUBSPOT_ACCESS_TOKEN") or os.getenv("HUBSPOT_TOKEN")
 
-with open("../day-11/personalized_leads.csv", newline="", encoding="utf-8-sig") as file:
-    reader = csv.DictReader(file)
+    if not TOKEN:
+        raise RuntimeError("HubSpot token not found.")
 
-    for lead in reader:
-        name = lead.get("company_name", "").strip()
-        domain = lead.get("website", "").strip()
+    URL = "https://api.hubapi.com/crm/v3/objects/companies"
+    HEADERS = {
+        "Authorization": f"Bearer {TOKEN}",
+        "Content-Type": "application/json",
+    }
 
-        if not name or not domain: #If the company name or website is missing, skip that lead and move to the next one.
-            continue
-        #Remember: continue skips the current iteration; break stops the entire loop.
-        #Without continue, the script would execute 'the remaining code' for that --->lead,so potentially sending incomplete data----> to HubSpot.
+    with open(str(ROOT_DIR / "day-11/personalized_leads.csv"), newline="", encoding="utf-8-sig") as file:
+        reader = csv.DictReader(file)
 
-        response = requests.post(
-            URL,
-            headers=HEADERS,
-            json={"properties": {"name": name, "domain": domain}},
-            timeout=30,
-        )
+        for lead in reader:
+            name = lead.get("company_name", "").strip()
+            domain = lead.get("website", "").strip()
 
-        if response.status_code == 201:
-            print(f"CREATED: {name}")
-        elif response.status_code == 409:
-            print(f"ALREADY EXISTS: {name}")
-        else:
-            print(f"FAILED: {name} | {response.status_code} | {response.text[:200]}")
+            if not name or not domain: #If the company name or website is missing, skip that lead and move to the next one.
+                continue
+            #Remember: continue skips the current iteration; break stops the entire loop.
+            #Without continue, the script would execute 'the remaining code' for that --->lead,so potentially sending incomplete data----> to HubSpot.
+
+            response = requests.post(
+                URL,
+                headers=HEADERS,
+                json={"properties": {"name": name, "domain": domain}},
+                timeout=30,
+            )
+
+            if response.status_code == 201:
+                print(f"CREATED: {name}")
+            elif response.status_code == 409:
+                print(f"ALREADY EXISTS: {name}")
+            else:
+                print(f"FAILED: {name} | {response.status_code} | {response.text[:200]}")

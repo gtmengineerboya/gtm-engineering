@@ -8,13 +8,24 @@ from dotenv import load_dotenv
 # LOAD HUBSPOT TOKEN
 # --------------------------------
 
-load_dotenv("day-09/.env")
+from pathlib import Path
+import sys
+
+ROOT_DIR = Path(__file__).resolve().parent.parent  # repo root, independent of the working folder
+
+if __name__ != "__main__":
+    raise ImportError(
+        "csv_to_hubspot_idempotent.py is a lesson script, not a library: run it directly. "
+        "Importing it would execute it, and it may call external services."
+    )
+
+load_dotenv(str(ROOT_DIR / "day-09/.env"))
 
 token = os.getenv("HUBSPOT_ACCESS_TOKEN")
 
 if not token:
     print("ERROR: HubSpot token not found.")
-    exit()
+    sys.exit(1)
 
 headers = {
     "Authorization": f"Bearer {token}",
@@ -167,7 +178,7 @@ success_count = 0
 failed_count = 0
 
 with open(
-    "day-08/crm_ready_leads.csv",
+    str(ROOT_DIR / "day-08/crm_ready_leads.csv"),
     "r",
     newline="",
     encoding="utf-8"

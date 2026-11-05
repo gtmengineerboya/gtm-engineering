@@ -27,6 +27,13 @@ REQUIRED_COLUMNS = {
 
 APPROVED_STATUSES = {"APPROVED_AI", "APPROVED_FALLBACK"}
 
+# The API (day-13/pipeline_api.py) allows 900s for this whole script.
+# The outreach step must time out first so this script can log the failure
+# and stop its own child process instead of being killed mid-run.
+OUTREACH_TIMEOUT_SECONDS = 780
+# File timestamps can be coarse (for example on Windows or network drives).
+MTIME_TOLERANCE_SECONDS = 2
+
 
 def log_run(run_id, status, processed=0, approved=0,
             review_required=0, duration=0, details=""):
@@ -112,11 +119,22 @@ def validate_input():
     return len(rows)
 
 
-def validate_output():
+def validate_output(run_started_at=None):
+    """Check the outreach report. If run_started_at (epoch seconds) is given,
+    the report must have been written during this run, not left over from
+    an earlier one."""
     if not REVIEW_FILE.exists():
         raise FileNotFoundError(
             f"Outreach report was not created: {REVIEW_FILE}"
         )
+
+    if run_started_at is not None:
+        modified = REVIEW_FILE.stat().st_mtime
+        if modified < run_started_at - MTIME_TOLERANCE_SECONDS:
+            raise RuntimeError(
+                "Outreach report is stale: it was not updated by this run. "
+                f"Check {OUTREACH_SCRIPT.name}."
+            )
 
     with REVIEW_FILE.open(newline="", encoding="utf-8-sig") as file:
         reader = csv.DictReader(file)
@@ -153,6 +171,7 @@ def validate_output():
 def main():
     run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     started = time.monotonic()
+    started_wall = time.time()
 
     print(f"Run ID: {run_id}")
     print("Step 1/4: Checking input data...")
@@ -169,7 +188,7 @@ def main():
         cwd=str(ROOT),
         capture_output=True,
         text=True,
-        timeout=900,
+        timeout=OUTREACH_TIMEOUT_SECONDS,
     )
 
     if result.stdout:
@@ -183,7 +202,7 @@ def main():
         )
 
     print("Step 4/4: Validating the generated report...")
-    total, approved, review_required = validate_output()
+    total, approved, review_required = validate_output(started_wall)
 
     duration = time.monotonic() - started
     details = (
