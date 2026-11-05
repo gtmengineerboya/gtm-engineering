@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import time
+from collections.abc import Callable
 from urllib.parse import quote
 
 import requests
@@ -14,11 +15,12 @@ def run_pipeline(
     timeout_seconds: int = 900,
     poll_seconds: float = 3.0,
     session: requests.Session | None = None,
+    clock: Callable[[], float] = time.monotonic,
 ) -> dict:
     if timeout_seconds <= 0 or poll_seconds <= 0:
         raise ValueError("Polling timeout and interval must be positive")
     client = session or requests.Session()
-    started = time.monotonic()
+    started = clock()
     trigger = client.post(
         base_url.rstrip("/") + "/run-pipeline", timeout=10
     )
@@ -27,7 +29,7 @@ def run_pipeline(
     status_url = (
         base_url.rstrip("/") + "/run-status/" + quote(str(run_id), safe="")
     )
-    while time.monotonic() - started < timeout_seconds:
+    while clock() - started < timeout_seconds:
         response = client.get(status_url, timeout=10)
         response.raise_for_status()
         result = response.json()
