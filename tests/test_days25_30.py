@@ -69,13 +69,20 @@ class Day16PollingTests(unittest.TestCase):
         self.assertEqual(session.posts, 1)
 
     def test_timeout_does_not_trigger_again(self):
+        # A fake clock keeps this test independent of the operating system's
+        # clock resolution (Windows + Python 3.12 can return the same
+        # monotonic() value twice in a row, which made a 1-microsecond
+        # real-time timeout unreliable).
+        ticks = iter([0.0, 1000.0])
         session = self.Session([])
         with self.assertRaises(TimeoutError):
             poll_client.run_pipeline(
                 session=session,
-                timeout_seconds=0.000001,
+                timeout_seconds=1,
+                clock=lambda: next(ticks),
             )
         self.assertEqual(session.posts, 1)
+        self.assertEqual(session.gets, 0)
 
     def test_n8n_export_is_inactive_and_uses_one_trigger(self):
         workflow = json.loads(
